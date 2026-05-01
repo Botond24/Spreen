@@ -13,7 +13,7 @@ configure({
 	appenders: {
 		fileAppender: {
 			type: 'file',
-			filename: path.join(__dirname, './logs.log'),
+			filename: process.env.SPREEND_LOG_FILE || path.join(__dirname, './logs.log'),
 		},
 		console: {
 			type: 'console',
